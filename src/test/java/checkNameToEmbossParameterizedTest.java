@@ -37,7 +37,6 @@ public class checkNameToEmbossParameterizedTest {
     }
 
     @Test
-    @Step("Проверка <name> на соответствие шаблону")
     public void main() {
         Account account = new Account(name);
         boolean actual = account.checkNameToEmboss();
