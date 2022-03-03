@@ -18,19 +18,35 @@ public class checkNameToEmbossParameterizedTest {
     @Parameterized.Parameters
     public static Object[][] getParams() {
         return new Object[][]{
+                //Имя 18 символов
                 {"Тамара Конашенкова", true},
-                {"Вероника Пишкалко", true},
+                //Имя 19 символов
+                {"Вероника Пишкалкова", true},
+                //Имя 4 символа
                 {"WI l", true},
+                //Имя 3 символа
                 {"L U", true},
+                //Имя 9 символов
                 {"Луна Нуль", true},
+                //имя без пробела
                 {"Петров", false},
+                //Имя с пробелом вначале
                 {" Ivanov", false},
+                //Имя с пробелом вконце
                 {"Сидоров ", false},
+                //Имя с двумя сиволами
                 {"X ", false},
+                //Пустая строка
                 {"", false},
+                //Строка с одним пробелом
                 {" ", false},
+                // Проверка на null
+                {null, false},
+                //Имя 20 символов
                 {"Garetbnnx cncnnncnnf", false},
-                {"fjnvnvnjna vvтмовмттшшшшш ", false},
+                //Имя 25 символов
+                {"fjnvnvnjna vvтмовмттшшшшш", false},
+                //Имя с двумя пробелами
                 {"Тамара  Конашенкова", false},
 
         };
